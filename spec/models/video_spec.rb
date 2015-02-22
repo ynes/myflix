@@ -23,8 +23,8 @@ describe Video do
   end
    it "should calculate the average rating of the reviews" do
      video = Fabricate(:video)
-     review1 = Fabricate(:review, video: video, rating: 3) 
-     review2 = Fabricate(:review, video: video, rating: 2) 
+     review1 = Fabricate(:review, video: video, rating: 3, user: Fabricate(:user)) 
+     review2 = Fabricate(:review, video: video, rating: 2, user: Fabricate(:user)) 
      average = video.average_rating
      expect(average).to be 2.5
    end
