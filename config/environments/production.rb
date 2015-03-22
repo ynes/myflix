@@ -18,6 +18,7 @@ Myflix::Application.configure do
 
   config.active_support.deprecation = :notify
 
+  config.action_mailer.default_url_options = { :host => "myflix3000.herokuapp.com" }
 
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
