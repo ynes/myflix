@@ -11,6 +11,11 @@ Myflix::Application.routes.draw do
       post "search"
     end
   end
+
+  namespace :admin do
+    resources :videos, only: [:new, :create]
+  end
+
   resources :forgot_passwords, only: [:create]
   resources :password_resets, only: [:show, :create]
 

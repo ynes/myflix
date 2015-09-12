@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] = 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require "debugger"
 require 'shoulda/matchers'
 require "capybara/email/rspec"
 require "sidekiq/testing/inline"
